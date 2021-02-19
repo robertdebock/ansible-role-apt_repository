@@ -7,7 +7,7 @@
   delegate_to: localhost
 
 - name: manage repository
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state | default('present') }}"
     validate_certs: no
