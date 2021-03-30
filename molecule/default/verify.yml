@@ -11,5 +11,5 @@
 
   post_tasks:
     - name: install a test package
-      package:
+      ansible.builtin.package:
         name: vlc
