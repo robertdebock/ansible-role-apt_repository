@@ -1,6 +1,6 @@
 # [apt_repository](#apt_repository)
 
-Manage apt repositories.
+Manage apt repositor(y|ies).
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
@@ -18,6 +18,8 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 
   roles:
     - role: robertdebock.apt_repository
+      apt_repositories:
+        - repo: "deb https://dl.yarnpkg.com/debian/ stable main"
 ```
 
 The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
@@ -30,6 +32,19 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 
   roles:
     - role: robertdebock.bootstrap
+
+  tasks:
+    - name: install apt-transport-https ca-certificates
+      ansible.builtin.package:
+        name: "{{ item }}"
+      loop:
+        - apt-transport-https
+        - ca-certificates
+
+    - name: install yarn public key
+      ansible.builtin.apt_key:
+        url: "https://dl.yarnpkg.com/debian/pubkey.gpg"
+        validate_certs: no
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
