@@ -6,3 +6,5 @@
 
   roles:
     - role: ansible-role-apt_repository
+      apt_repositories:
+        - repo: deb https://dl.yarnpkg.com/debian/ stable main

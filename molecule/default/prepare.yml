@@ -6,3 +6,16 @@
 
   roles:
     - role: robertdebock.bootstrap
+
+  tasks:
+    - name: install apt-transport-https ca-certificates
+      ansible.builtin.package:
+        name: "{{ item }}"
+      loop:
+        - apt-transport-https
+        - ca-certificates
+
+    - name: install yarn public key
+      ansible.builtin.apt_key:
+        url: "https://dl.yarnpkg.com/debian/pubkey.gpg"
+        validate_certs: no
