@@ -5,6 +5,6 @@
   gather_facts: no
 
   tasks:
-    - name: install a test package
+    - name: Install a test package
       ansible.builtin.package:
         name: yarn
