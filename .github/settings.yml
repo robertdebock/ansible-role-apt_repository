@@ -5,4 +5,4 @@
 repository:
   description: Manage apt repositor(y|ies).
   homepage: https://robertdebock.nl/
-  topics: apt, repository, ansible, molecule, tox, playbook
+  topics: apt, repository, system, security, ansible, molecule, tox, playbook
