@@ -2,9 +2,9 @@
 
 Manage apt repositor(y|ies).
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-apt_repository/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-apt_repository/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-apt_repository/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-apt_repository)|[![quality](https://img.shields.io/ansible/quality/58057)](https://galaxy.ansible.com/robertdebock/apt_repository)|[![downloads](https://img.shields.io/ansible/role/d/58057)](https://galaxy.ansible.com/robertdebock/apt_repository)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-apt_repository.svg)](https://github.com/robertdebock/ansible-role-apt_repository/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-apt_repository/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-apt_repository/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-apt_repository/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-apt_repository)|[![downloads](https://img.shields.io/ansible/role/d/24438)](https://galaxy.ansible.com/robertdebock/apt_repository)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-apt_repository.svg)](https://github.com/robertdebock/ansible-role-apt_repository/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -101,7 +101,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-apt_repository/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-apt_repository/issues).
 
 ## [License](#license)
 
