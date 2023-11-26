@@ -1,4 +1,4 @@
-# Ansible role [apt_repository](#apt_repository)
+# [Ansible role apt_repository](#apt_repository)
 
 Manage apt repositor(y|ies).
 
