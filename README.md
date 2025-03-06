@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: true
 
   roles:
-    - role: robertdebock.apt_repository
+    - role: ansible-role-apt_repository
       apt_repositories:
         - repo: "deb https://dl.yarnpkg.com/debian/ stable main"
 ```
