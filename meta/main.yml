@@ -5,17 +5,19 @@ galaxy_info:
   description: Manage apt repositor(y|ies).
   license: Apache-2.0
   company: none
-  min_ansible_version: "2.12"
-
+  min_ansible_version: '2.12'
   platforms:
+    - name: Debian
+      versions:
+        - bullseye
+        - bookworm
     - name: Ubuntu
       versions:
-        - all
-
+        - jammy
+        - noble
   galaxy_tags:
     - apt
     - repository
     - system
     - security
-
 dependencies: []
