@@ -9,8 +9,7 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - bullseye
-        - bookworm
+        - all
     - name: Ubuntu
       versions:
         - jammy
