@@ -15,7 +15,10 @@
         - apt-transport-https
         - ca-certificates
 
+    # `apt-key` is gone in Debian 13, so `ansible.builtin.apt_key` fails.
     - name: Install yarn public key
-      ansible.builtin.apt_key:
+      ansible.builtin.get_url:
         url: "https://dl.yarnpkg.com/debian/pubkey.gpg"
+        dest: /etc/apt/trusted.gpg.d/yarn.asc
+        mode: "0644"
         validate_certs: false
