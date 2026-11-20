@@ -43,9 +43,12 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
         - apt-transport-https
         - ca-certificates
 
+    # `apt-key` is gone in Debian 13, so `ansible.builtin.apt_key` fails.
     - name: Install yarn public key
-      ansible.builtin.apt_key:
+      ansible.builtin.get_url:
         url: "https://dl.yarnpkg.com/debian/pubkey.gpg"
+        dest: /etc/apt/trusted.gpg.d/yarn.asc
+        mode: "0644"
         validate_certs: false
 ```
 
@@ -96,11 +99,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |[Debian](https://hub.docker.com/r/robertdebock/debian)|all|
 |[Ubuntu](https://hub.docker.com/r/robertdebock/ubuntu)|jammy, noble|
 
-The minimum version of Ansible required is 2.12, tests have been done on:
-
-- The previous version.
-- The current version.
-- The development version.
+The minimum version of Ansible (ansible-core) required is 2.20, tests are done with the latest release of ansible-core.
 
 If you find issues, please register them on [GitHub](https://github.com/robertdebock/ansible-role-apt_repository/issues).
 
